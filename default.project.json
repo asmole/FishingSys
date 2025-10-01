@@ -1,0 +1,54 @@
+{
+  "name": "FishingSys",
+  "tree": {
+    "$className": "DataModel",
+
+    "Workspace": {
+      "Terrain": {
+        "$path": "Assets/Terrain.rbxm"
+      }
+    },
+
+    "ReplicatedStorage": {
+      "FishCommon": {
+        "$path": "src/shared",
+      
+        "Assets": {
+          "$path": "Assets/Common"
+        },
+
+        "Communication": {
+          "$className": "Folder",
+
+          "Client": {
+            "$className": "Folder",
+
+            "FishEvent": { "$className": "RemoteFunction" },
+            "IncShake": { "$className": "RemoteEvent" }
+          },
+          "Server": {
+            "$className": "Folder",
+
+            "CaughtFish": { "$className": "RemoteEvent" },
+            "PauseEvent": { "$className": "RemoteEvent" },
+            "ReelState": { "$className": "RemoteEvent" },
+            "RestartEvent": { "$className": "RemoteEvent" }
+          },
+
+          "Client-CancelEvent": { "$className": "RemoteEvent" },
+          "Server-CancelEvent": { "$className": "RemoteEvent" }
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$path": "src/server"
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/client"
+      }
+    }
+  }
+}
